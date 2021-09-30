@@ -4,11 +4,11 @@ Turn one text into two texts using inline separators
 
 # Getting started
 
-<!-- ## Install
+## Install
 
 ```bash
 npm i separated-text-composer
-``` -->
+```
 
 ## Usage
 

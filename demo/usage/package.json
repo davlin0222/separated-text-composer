@@ -2,6 +2,6 @@
     "name": "separated-text-composer-usage-demo",
     "main": "usage.js",
     "dependencies": {
-        "separated-text-composer": "^1.0.1"
+        "separated-text-composer": "1.0.3"
     }
 }
