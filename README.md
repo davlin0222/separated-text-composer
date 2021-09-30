@@ -41,4 +41,4 @@ Nice!
 */
 ```
 
-[example from _demo/usage.js_](./demo/usage.js)
+[code from _demo/usage.js_](./demo/usage.js)
