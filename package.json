@@ -12,9 +12,10 @@
     "bugs": {
         "url": "https://github.com/davlin0222/separated-text-composer/issues"
     },
-    "version": "1.0.1",
+    "version": "1.0.2",
     "files": [
-        "logic/separate_text.js"
+        "logic/separate_text.js",
+        "demo"
     ],
     "directories": {
         "test": "test"

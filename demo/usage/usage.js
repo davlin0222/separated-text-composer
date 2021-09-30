@@ -1,4 +1,4 @@
-const separated_texts = require('./path/to/separated-text-composer');
+const separated_text_composer = require('separated-text-composer');
 
 // const text = `
 // A: Tjena! <<->> A: What's up!
