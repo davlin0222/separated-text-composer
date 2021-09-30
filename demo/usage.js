@@ -1,19 +1,11 @@
-# Text splitter
-
-Turn one text into two texts using inline separators
-
-# Getting started
-
-<!-- ## Install
-
-```bash
-npm i text-splitter
-``` -->
-
-## Usage
-
-```js
 const text_splitter = require('./path/to/text-splitter');
+
+// const text = `
+// A: Tjena! <<->> A: What's up!
+// B: Vad gör du idag? <<->> B: What are you doing today?
+// A: Programmerar såklart <<->> A: Programming of course
+// B: Nice!
+// `;
 
 const text = `
 Tjena! <<->> What's up!
@@ -39,6 +31,3 @@ What are you doing today?
 Programming of course
 Nice!
 */
-```
-
-[example from _demo/usage.js_](./demo/usage.js)
