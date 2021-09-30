@@ -1,6 +1,6 @@
-module.exports = { separate_languages };
+module.exports = { split_text };
 
-function separate_languages(text) {
+function split_text(text) {
     if (!text.includes('<<->>')) return [text];
 
     const lines = text.split('\n');

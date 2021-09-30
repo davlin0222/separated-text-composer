@@ -1,3 +1,3 @@
-# Multi Lingual
+# Text splitter
 
-Use multiple languages in one file and output into seperate files
+Turn one text into two texts using inline separators

@@ -1,6 +1,6 @@
 {
-    "name": "multi-lingual",
-    "description": "Use multiple languages in one file and output into seperate files",
+    "name": "text-splitter",
+    "description": "Turn one text into two texts using inline separators",
     "keywords": [],
     "license": "MIT",
     "author": "DavLin",
