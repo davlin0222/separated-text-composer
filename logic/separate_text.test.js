@@ -1,6 +1,9 @@
 const { separate_text } = require('./separate_text');
 
 describe('separate_text', () => {
+    it('is callable', () => {
+        separate_text();
+    });
     it("returns unmodified, when input doesn't have any separator", () => {
         expect(separate_text('hi')).toEqual(['hi']);
     });
@@ -44,4 +47,27 @@ I'm great
 Nice`,
         ]);
     });
+    it('works when provided custom separator', () => {
+        expect(separate_text('language one <---> language two', '<--->')).toEqual([
+            'language one',
+            'language two',
+        ]);
+    });
+
+    // it('works with no space around separator', () => {
+    //     expect(separate_text('language one<<->>language two')).toEqual([
+    //         'language one',
+    //         'language two',
+    //     ]);
+    // });
+    // it('works with separator in between lines', () => {
+    //     expect(
+    //         separate_text(
+    //             `hej
+    // <|>
+    // hi`,
+    //             '\n<|>\n'
+    //         )
+    //     ).toEqual([`hej`, `hi`]);
+    // });
 });

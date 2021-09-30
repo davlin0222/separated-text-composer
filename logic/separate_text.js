@@ -1,31 +1,33 @@
 module.exports = { separate_text };
 
-function separate_text(text) {
-    if (!text.includes('<<->>')) return [text];
+function separate_text(text = '', separator = '<<->>', end_of_line = '\n') {
+    if (!text.includes(separator)) return [text];
 
-    const lines = text.split('\n');
+    const lines = text.split(end_of_line);
 
     const separated_lines = lines.map(line => {
-        if (line.includes('<<->>')) return line.split(' <<->> ');
+        if (line.includes(separator)) {
+            const line_varieties = line.split(separator);
+            const line_variety_one = line_varieties[0].replace(/\s+$/g, '');
+            const line_variety_two = line_varieties[1].replace(/^\s+/g, '');
+            return [line_variety_one, line_variety_two];
+        }
         return [line, line];
     });
-    // console.log('separate ~ separated_lines', separated_lines);
 
-    const lines_per_language = separated_lines.reduce(
-        (language_lines, separated_line) => {
+    const lines_per_variety = separated_lines.reduce(
+        (variety_lines, separated_line) => {
             return [
-                [...language_lines[0], separated_line[0]],
-                [...language_lines[1], separated_line[1]],
+                [...variety_lines[0], separated_line[0]],
+                [...variety_lines[1], separated_line[1]],
             ];
         },
         [[], []]
     );
-    // console.log('lines_per_language', lines_per_language);
 
-    const text_per_language = lines_per_language.map(text_in_language => {
-        return text_in_language.join('\n');
+    const text_per_variety = lines_per_variety.map(text_in_variety => {
+        return text_in_variety.join(end_of_line);
     });
-    // console.log('text_per_language', text_per_language);
 
-    return text_per_language;
+    return text_per_variety;
 }
