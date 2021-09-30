@@ -1,4 +1,4 @@
-const text_splitter = require('..');
+const separated_text_composer = require('..');
 
 const text = `
 Hejpådig <<->> Hello you
@@ -22,6 +22,6 @@ I'm great
 Nice
 `;
 
-test('text-splitter splits multiple lines correctly', () => {
-    expect(text_splitter(text)).toEqual([text_one, text_two]);
+test('separated-text-composer splits multiple lines correctly', () => {
+    expect(separated_text_composer(text)).toEqual([text_one, text_two]);
 });

@@ -1,9 +1,9 @@
-const { split_text } = require('./logic/split_text');
+const { separate_text } = require('./logic/separate_text');
 
-module.exports = text_splitter;
+module.exports = separated_text_composer;
 
-function text_splitter(text) {
-    const two_texts = split_text(text);
+function separated_text_composer(text) {
+    const two_texts = separate_text(text);
 
     return two_texts;
 }

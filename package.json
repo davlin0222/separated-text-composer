@@ -1,20 +1,20 @@
 {
-    "name": "text-splitter",
+    "name": "separated-text-composer",
     "description": "Turn one text into two texts using inline separators",
     "keywords": [],
     "license": "MIT",
     "author": "DavLin",
-    "homepage": "https://github.com/davlin0222/text-splitter#readme",
+    "homepage": "https://github.com/davlin0222/separated-text-composer#readme",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/davlin0222/text-splitter.git"
+        "url": "git+https://github.com/davlin0222/separated-text-composer.git"
     },
     "bugs": {
-        "url": "https://github.com/davlin0222/text-splitter/issues"
+        "url": "https://github.com/davlin0222/separated-text-composer/issues"
     },
     "version": "1.0.0",
     "files": [
-        "logic/split_text.js"
+        "logic/separate_text.js"
     ],
     "directories": {
         "test": "test"

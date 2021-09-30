@@ -1,6 +1,6 @@
-module.exports = { split_text };
+module.exports = { separate_text };
 
-function split_text(text) {
+function separate_text(text) {
     if (!text.includes('<<->>')) return [text];
 
     const lines = text.split('\n');
