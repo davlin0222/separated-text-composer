@@ -3,15 +3,13 @@ const { separate_text } = require('./logic/separate_text');
 
 module.exports = separated_text_composer;
 
-function separated_text_composer(separated_text, separator = '<<->>') {
+function separated_text_composer(separated_text = '', separator = '<<->>') {
     const unique_separator = pick_unique_separator(separated_text);
 
-    const uniquely_separated_text = separated_text.replace(
-        new RegExp(separator, 'g'),
+    const uniquely_separated_text = separated_text.replaceAll(
+        separator,
         unique_separator
     );
 
-    const two_texts = separate_text(uniquely_separated_text, unique_separator);
-
-    return two_texts;
+    return separate_text(uniquely_separated_text, unique_separator);
 }

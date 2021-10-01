@@ -10,13 +10,13 @@ describe('separate_text', () => {
     it('returns array with length two when text includes one separator', () => {
         expect(separate_text('language one <<->> language two').length).toBe(2);
     });
-    it('returns array of two separated languages when text is one line and includes a separator', () => {
+    it('returns array of two separated varieties when text is one line and includes a separator', () => {
         expect(separate_text('language one <<->> language two')).toEqual([
             'language one',
             'language two',
         ]);
     });
-    it('returns array of two separated languages languages when text has multiple lines, some of them with separators', () => {
+    it('returns array of two separated varieties when text has multiple lines, some of them with separators', () => {
         expect(
             separate_text(
                 'language one <<->> language two\n\nalso language one <<->> also language two'
@@ -53,21 +53,4 @@ Nice`,
             'language two',
         ]);
     });
-
-    // it('works with no space around separator', () => {
-    //     expect(separate_text('language one<<->>language two')).toEqual([
-    //         'language one',
-    //         'language two',
-    //     ]);
-    // });
-    // it('works with separator in between lines', () => {
-    //     expect(
-    //         separate_text(
-    //             `hej
-    // <|>
-    // hi`,
-    //             '\n<|>\n'
-    //         )
-    //     ).toEqual([`hej`, `hi`]);
-    // });
 });

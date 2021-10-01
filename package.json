@@ -12,7 +12,7 @@
     "bugs": {
         "url": "https://github.com/davlin0222/separated-text-composer/issues"
     },
-    "version": "1.1.0",
+    "version": "1.1.1",
     "files": [
         "logic/pick_unique_separator.js",
         "logic/separate_text.js"

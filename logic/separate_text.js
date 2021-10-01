@@ -6,13 +6,11 @@ function separate_text(text = '', separator = '<<->>', end_of_line = '\n') {
     const lines = text.split(end_of_line);
 
     const separated_lines = lines.map(line => {
-        if (line.includes(separator)) {
-            const line_varieties = line.split(separator);
-            const line_variety_one = line_varieties[0].replace(/\s+$/g, '');
-            const line_variety_two = line_varieties[1].replace(/^\s+/g, '');
-            return [line_variety_one, line_variety_two];
-        }
-        return [line, line];
+        if (!line.includes(separator)) return [line, line];
+        const line_varieties = line.split(separator);
+        const line_variety_one = line_varieties[0].replace(/\s+$/g, '');
+        const line_variety_two = line_varieties[1].replace(/^\s+/g, '');
+        return [line_variety_one, line_variety_two];
     });
 
     const lines_per_variety = separated_lines.reduce(
